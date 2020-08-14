@@ -36,12 +36,7 @@
     - command: /home/isucon/.xbuild/go-install 1.10 /home/isucon/.local/go
       args:
         creates: /home/isucon/.local/go/bin/go
-    # scala
-    - shell: curl http://downloads.typesafe.com/scala/2.11.7/scala-2.11.7.tgz | (cd /home/isucon/.local && tar xzf -)
-      args:
-        creates: /home/isucon/.local/scala-2.11.7/bin/scala
-    - file: src=/home/isucon/.local/scala-2.11.7 dest=/home/isucon/.local/scala state=link
-
+    
 - hosts: imageservers
   sudo: yes
   gather_facts: no
